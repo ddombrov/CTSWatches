@@ -40,7 +40,7 @@ export default function GamePage() {
   useEffect(() => {
 
     // Load game from localStorage
-    const savedGame = localStorage.getItem("watchcraft-game");
+    const savedGame = localStorage.getItem("watchout-game");
     if (savedGame) {
       setGameState(JSON.parse(savedGame));
     }
@@ -51,7 +51,7 @@ export default function GamePage() {
 
     // Save if the game has started
     if (gameState.started) {
-      localStorage.setItem("watchcraft-game", JSON.stringify(gameState));
+      localStorage.setItem("watchout-game", JSON.stringify(gameState));
     }
   }, [gameState]);
 
@@ -255,12 +255,12 @@ export default function GamePage() {
   const endGame = () => {
 
     // Reset to initial state
-    localStorage.removeItem("watchcraft-game");
+    localStorage.removeItem("watchout-game");
     window.location.href = "/";
   };
 
   const resetGame = () => {
-    localStorage.removeItem("watchcraft-game");
+    localStorage.removeItem("watchout-game");
     setGameState({
       started: false,
       money: 5000,
@@ -282,7 +282,7 @@ export default function GamePage() {
 
   // saveGame is "not ready" 
   const saveGame = () => {
-    localStorage.setItem("watchcraft-game", JSON.stringify(gameState));
+    localStorage.setItem("watchout-game", JSON.stringify(gameState));
     setShowSaveNotification(true);
     setTimeout(() => setShowSaveNotification(false), 2000);
   };
@@ -568,7 +568,7 @@ export default function GamePage() {
               Congratulations!
             </h1>
             <p className="text-2xl text-blue-200 mb-6">
-              You've completed all missions in WatchCraft!
+              You've completed all missions in WatchOut!
             </p>
 
             <div className="flex justify-center mb-8">
@@ -661,7 +661,7 @@ export default function GamePage() {
       <div className="container mx-auto px-4 py-8">
         <header className="flex flex-wrap items-center mb-8 gap-4">
           <h1 className="text-3xl font-bold text-yellow-400 mr-auto">
-            ⌚️ WatchCraft
+            ⌚️ WatchOut
           </h1>
           <div className="relative">
             <Button
@@ -1218,7 +1218,7 @@ export default function GamePage() {
         <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
           <div className="bg-blue-950 rounded-lg p-6 max-w-2xl max-h-[80vh] overflow-y-auto shadow-2xl">
             <h2 className="text-2xl font-bold text-yellow-400 mb-4">
-              WatchCraft: The Time Is Yours
+              WatchOut: The Time Is Yours
             </h2>
             <div className="text-blue-100 space-y-4">
               <p>

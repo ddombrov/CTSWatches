@@ -6,7 +6,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8">
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold text-yellow-400 mb-2">
-            ⌚️ WatchCraft: The Time Is Yours
+            ⌚️ WatchOut: The Time Is Yours
           </h1>
           <p className="text-blue-200 max-w-2xl mx-auto">
             A strategy-focused game where watches aren't just for telling
